@@ -1,0 +1,462 @@
+@font-face {
+  font-family: "PTSans";
+  src: url(../fonts/pt-sans_regular.woff2) format("woff2"),
+    url(../fonts/pt-sans_regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url(../fonts/pt-sans_bold.woff2) format("woff2"),
+    url(../fonts/pt-sans_bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: local("Source Sans Pro Semi Bold"), local("Source-Sans-Pro-Semi-Bold"),
+    url(../fonts/SourceSansPro-SemiBold.woff2) format("woff2"),
+    url(../fonts/SourceSansPro-SemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: local("Source Sans Pro Bold"), local("Source-Sans-Pro-Bold"),
+    url(../fonts/SourceSansPro-Bold.woff2) format("woff2"),
+    url(../fonts/SourceSansPro-Bold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PTSans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1700px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  padding: 19px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 48px;
+  background-image: url(../img/images/background.png);
+  background-color: #108a81;
+}
+
+/* HEADER */
+.header {
+  padding-top: 42px;
+  padding-bottom: 28px;
+  background-image: url(../img/images/background.png);
+  background-color: #108a81;
+}
+
+.header__logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.header__logo {
+  width: 38%;
+  text-align: center;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.header__nav {
+  max-width: 1415px;
+  margin: 0 auto;
+}
+
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header__nav-item {
+  margin: 0;
+  padding: 0;
+
+  & a {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 12px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out border;
+
+    &:hover,
+    &:active {
+      border: 1px solid #fff;
+    }
+  }
+}
+
+/* BANNER */
+.banner__img {
+  width: 100%;
+}
+
+/* ADVANTAGES */
+.advantages {
+  /* padding-top: 32px; */
+  padding-bottom: 28px;
+}
+
+.advantages__descr {
+  text-align: center;
+  font-size: 44px;
+  line-height: 78px;
+  margin-bottom: 67px;
+
+  & b {
+    font-weight: 700;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 33px;
+  width: 97%;
+  padding-left: 5px;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  /* padding: 0 25px; */
+
+  &:nth-of-type(2) {
+    width: 610px;
+  }
+}
+
+.advantages__item-title {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: -2%;
+}
+
+.advantages__img {
+  width: 205px;
+  margin-bottom: 44px;
+}
+
+.advantages__descr-bottom {
+  text-align: center;
+  line-height: 78px;
+  font-size: 44px;
+
+  & b {
+    font-weight: 700;
+  }
+}
+/* ADVANTAGES END*/
+
+/* GOODS */
+.good-descr {
+  line-height: 53px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+  text-align: center;
+  width: 72%;
+}
+
+.good-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.good-list-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  margin-bottom: 2px;
+}
+
+.good-item-link {
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & img {
+    height: 514px;
+    width: 440px;
+    object-fit: contain;
+    margin-bottom: 13px;
+  }
+
+  & p {
+    font-family: "Source Sans Pro";
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.good-link {
+  padding: 21px 126px;
+  margin-bottom: 44px;
+  background: #108a81;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+}
+
+.good-banner {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* FRIDGES */
+.fridges__descr {
+  width: 97%;
+}
+
+.fridges__swiper {
+  margin-bottom: 47px;
+
+  & .swiper-wrapper {
+    width: 1233px;
+    height: 757px;
+    margin: 0 auto;
+    margin-bottom: 37px;
+  }
+
+  .swiper-btn-fridge-prev {
+    width: 77px;
+    height: 77px;
+    top: 42.75%;
+    left: 99px;
+    background: url(../img/icons/arrow.svg);
+
+    &::after {
+      display: none;
+    }
+  }
+  .swiper-btn-fridge-next {
+    width: 77px;
+    height: 77px;
+    top: 42.75%;
+    right: 116px;
+    background: url(../img/icons/arrow.svg);
+    transform: rotate(180deg);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    & span.swiper-pagination-bullet {
+      margin-right: 29px;
+      height: 27px;
+      width: 27px;
+      background-color: #108a81;
+    }
+  }
+}
+
+/* FRIDGES END */
+
+/* WHASHERES */
+
+.washeres__title {
+  margin-bottom: 27px;
+}
+
+.washeres__item-link {
+  img {
+    height: 440px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(2) {
+    width: 560px;
+  }
+}
+
+.washeres__descr {
+  margin-bottom: 45px;
+}
+
+/* MICROWAVE */
+.microwave__banner {
+  img {
+    width: 100%;
+  }
+}
+
+/* ADVANTAGES BOTTOM */
+.advantages-bottom__descr {
+  text-align: center;
+  font-size: 44px;
+  line-height: 78px;
+  margin-bottom: 67px;
+
+  & b {
+    font-weight: 700;
+  }
+}
+
+.advantages-bottom__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 74%;
+  padding-left: 5px;
+}
+
+.advantages-bottom__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 424px;
+  /* padding: 0 25px; */
+}
+
+.advantages-bottom__img {
+  margin-bottom: 20px;
+}
+
+.advantages-bottom__item-title {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: -2%;
+}
+
+.advantages-bottom {
+  margin-bottom: 125px;
+}
+
+/* FOOTER */
+.footer {
+  padding-top: 87px;
+  padding-bottom: 71px;
+  /* background-image: url(../img/images/background.png); */
+  background-image: url(../img/images/background-bottom.png);
+  background-color: #108a81;
+  color: #fff;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.footer__logo {
+  img {
+    max-width: 488px;
+  }
+}
+
+.footer__tel-title {
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+
+.footer__tel-descr {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footer__tel-number {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__tel-time {
+  font-size: 12px;
+}
+
+.footer__mail-title {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 700;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 17px;
+    left: 0;
+    background: url(../img/icons/email.svg) no-repeat center;
+  }
+}
+
+.footer__mail-post {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
