@@ -55,8 +55,6 @@ body {
   margin: 0 auto;
   max-width: 1700px;
   padding: 0 20px;
-  /* padding-left: 100px;
-  padding-right: 100px; */
 }
 
 .visually-hidden {
@@ -109,7 +107,6 @@ body {
 }
 
 .header__nav {
-  /* max-width: 1415px; */
   width: 80%;
   margin: 0 auto;
 }
@@ -180,7 +177,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 500px;
-  /* padding: 0 25px; */
 
   &:nth-of-type(2) {
     width: 610px;
@@ -236,7 +232,6 @@ body {
 }
 
 .good-item-link {
-  /* width: 510px; */
   width: 48%;
   display: flex;
   flex-direction: column;
@@ -246,7 +241,6 @@ body {
   & img {
     max-height: 440px;
     height: auto;
-    /* width: 440px; */
     object-fit: contain;
     margin-bottom: 13px;
   }
@@ -289,8 +283,6 @@ body {
   margin-bottom: 47px;
 
   & .swiper-wrapper {
-    /* width: 1233px;
-    height: 757px; */
     margin: 0 auto;
     border-radius: 6px;
     margin-bottom: 37px;
@@ -333,31 +325,7 @@ body {
     }
   }
 }
-
 /* FRIDGES END */
-
-/* WHASHERES */
-.washeres__title {
-  margin-bottom: 27px;
-}
-
-/* .washeres__item-link {
-  img {
-    height: 440px;
-    margin-bottom: 30px;
-  }
-} */
-
-/* .washeres__descr {
-  margin-bottom: 45px;
-} */
-
-/* MICROWAVE */
-.microwave__banner {
-  img {
-    width: 100%;
-  }
-}
 
 /* ADVANTAGES BOTTOM */
 .advantages-bottom__descr {
@@ -385,7 +353,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 424px;
-  /* padding: 0 25px; */
 }
 
 .advantages-bottom__img {
@@ -443,18 +410,15 @@ body {
 
 .footer__tel-title {
   margin-bottom: 25px;
-  /* font-size: 36px; */
 }
 
 .footer__tel-descr {
   margin-bottom: 20px;
-  /* font-size: 36px; */
 }
 
 .footer__tel-number {
   display: block;
   margin-bottom: 8px;
-  /* font-size: 44px; */
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -467,7 +431,6 @@ body {
   position: relative;
   padding-left: 30px;
   margin-bottom: 20px;
-  /* font-size: 36px; */
   font-weight: 700;
 
   &::before {
@@ -484,24 +447,11 @@ body {
 
 .footer__mail-post {
   display: block;
-  /* font-size: 36px; */
   color: #fff;
   text-decoration: none;
 }
 
 @media (max-width: 1600px) {
-  /* .fridges__swiper {
-    margin-bottom: 47px;
-
-    & .swiper-wrapper {
-       max-width: 1233px; 
-      max-height: 757px;
-      margin: 0 auto;
-      border-radius: 6px;
-      margin-bottom: 37px;
-    }
-  } */
-
   .footer {
     p,
     a {
