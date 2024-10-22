@@ -215,7 +215,7 @@ body {
 .good-descr {
   line-height: 53px;
   margin: 0 auto;
-  margin-bottom: 13px;
+  margin-bottom: 30px;
   text-align: center;
   width: 72%;
 }
@@ -285,30 +285,30 @@ body {
 }
 
 /* FRIDGES */
-.fridges__descr {
-  width: 97%;
-}
-
 .fridges__swiper {
   margin-bottom: 47px;
 
   & .swiper-wrapper {
-    width: 1233px;
-    height: 757px;
+    /* width: 1233px;
+    height: 757px; */
     margin: 0 auto;
     border-radius: 6px;
     margin-bottom: 37px;
   }
 
-  & img {
-    width: auto;
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   & .swiper-btn {
     width: 77px;
     height: 77px;
     top: 42.75%;
-    background: url(../img/icons/arrow.svg);
+    background: url(../img/icons/arrow.svg) no-repeat center center;
+    background-size: contain;
 
     &::after {
       display: none;
@@ -316,10 +316,10 @@ body {
   }
 
   & .swiper-btn-fridge-prev {
-    left: 100px;
+    left: 0;
   }
   & .swiper-btn-fridge-next {
-    right: 100px;
+    right: 0;
     transform: rotate(180deg);
   }
 
@@ -337,25 +337,20 @@ body {
 /* FRIDGES END */
 
 /* WHASHERES */
-
 .washeres__title {
   margin-bottom: 27px;
 }
 
-.washeres__item-link {
+/* .washeres__item-link {
   img {
     height: 440px;
     margin-bottom: 30px;
   }
+} */
 
-  /* &:nth-child(2) {
-    width: 560px;
-  } */
-}
-
-.washeres__descr {
+/* .washeres__descr {
   margin-bottom: 45px;
-}
+} */
 
 /* MICROWAVE */
 .microwave__banner {
@@ -369,7 +364,7 @@ body {
   text-align: center;
   font-size: 44px;
   line-height: 78px;
-  margin-bottom: 67px;
+  margin-bottom: 45px;
 
   & b {
     font-weight: 700;
@@ -432,9 +427,18 @@ body {
   }
 }
 
+.footer__logo-wrap {
+  width: 30%;
+}
+
 .footer__logo {
+  display: block;
   max-width: 488px;
-  width: 26%;
+}
+
+.footer__tel-wrap,
+.footer__mail-wrap {
+  flex-shrink: 0;
 }
 
 .footer__tel-title {
@@ -474,6 +478,7 @@ body {
     top: 7px;
     left: 0;
     background: url(../img/icons/email.svg) no-repeat center;
+    background-size: contain;
   }
 }
 
@@ -485,10 +490,28 @@ body {
 }
 
 @media (max-width: 1600px) {
+  /* .fridges__swiper {
+    margin-bottom: 47px;
+
+    & .swiper-wrapper {
+       max-width: 1233px; 
+      max-height: 757px;
+      margin: 0 auto;
+      border-radius: 6px;
+      margin-bottom: 37px;
+    }
+  } */
+
   .footer {
     p,
     a {
       font-size: 26px;
+    }
+  }
+
+  .footer__mail-title {
+    &::before {
+      top: 5px;
     }
   }
 }
@@ -542,9 +565,34 @@ body {
       font-size: 20px;
     }
   }
+
+  .footer__container {
+    gap: 30px;
+  }
+
+  .footer__mail-title {
+    &::before {
+      top: 2px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
+  .header {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+  .header__logo-wrap {
+    margin-bottom: 20px;
+  }
+
+  .header__logo {
+    width: 50%;
+  }
+  .header__nav {
+    width: 90%;
+  }
+
   .header__nav-item {
     a {
       font-size: 24px;
@@ -559,7 +607,11 @@ body {
 
   .advantages__item-title,
   .advantages-bottom__item-title {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .advantages__descr {
+    margin-bottom: 45px;
   }
 
   .advantages__descr,
@@ -568,6 +620,19 @@ body {
   .advantages-bottom__descr {
     font-size: 24px;
     line-height: 20px;
+  }
+
+  .good-descr {
+    width: 90%;
+  }
+
+  .good-item-link {
+    width: 100%;
+
+    & img {
+      width: 65%;
+      max-height: 300px;
+    }
   }
   .good-banner {
     width: 100%;
@@ -587,10 +652,43 @@ body {
     font-size: 24px;
   }
 
+  .fridges__swiper {
+    .swiper-btn {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .advantages-bottom {
+    margin-bottom: 75px;
+  }
+
   .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
     p,
     a {
       font-size: 14px;
+    }
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .footer__logo-wrap,
+  .footer__mail-wrap,
+  .footer__tel-wrap {
+    width: 40%;
+  }
+
+  .footer__mail-title {
+    &::before {
+      width: 20px;
+      height: 15px;
+      top: 0px;
     }
   }
 }
@@ -608,11 +706,12 @@ body {
   .advantages-bottom__descr {
     font-size: 18px;
     line-height: 20px;
+    margin-bottom: 20px;
   }
 
   .advantages__item-title,
   .advantages-bottom__item-title {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .advantages__img,
@@ -635,15 +734,38 @@ body {
     padding: 21px 100px;
   }
 
+  .fridges__swiper .swiper-pagination {
+    & span.swiper-pagination-bullet {
+      margin-right: 20px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
   .footer {
     p,
     a {
       font-size: 10px;
     }
   }
+
+  .footer__mail-title {
+    padding-left: 20px;
+    &::before {
+      width: 15px;
+      height: 12px;
+      top: -1px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
+  .header__nav {
+    width: 100%;
+    & a {
+      padding: 3px 5px;
+    }
+  }
   .header__nav-item {
     & a {
       font-size: 14px;
@@ -660,7 +782,7 @@ body {
 
   .advantages__item-title,
   .advantages-bottom__item-title {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .advantages__img,
@@ -689,5 +811,11 @@ body {
     a {
       font-size: 8px;
     }
+  }
+
+  .footer__logo-wrap,
+  .footer__mail-wrap,
+  .footer__tel-wrap {
+    width: 60%;
   }
 }
