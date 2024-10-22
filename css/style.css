@@ -85,8 +85,8 @@ body {
 
 /* HEADER */
 .header {
-  padding-top: 42px;
-  padding-bottom: 28px;
+  padding-top: 20px;
+  padding-bottom: 16px;
   background-image: url(../img/images/background.png);
   background-color: #108a81;
 }
@@ -94,11 +94,11 @@ body {
 .header__logo-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .header__logo {
-  width: 38%;
+  width: 30%;
   text-align: center;
 
   & img {
@@ -107,7 +107,7 @@ body {
 }
 
 .header__nav {
-  width: 80%;
+  width: 66%;
   margin: 0 auto;
 }
 
@@ -124,7 +124,7 @@ body {
   padding: 0;
 
   & a {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 12px;
     color: #fff;
@@ -144,6 +144,8 @@ body {
 /* BANNER */
 .banner__img {
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* ADVANTAGES */
@@ -168,19 +170,14 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 33px;
-  width: 97%;
-  padding-left: 5px;
+  gap: 25px;
 }
 
 .advantages__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-
-  &:nth-of-type(2) {
-    width: 610px;
-  }
+  width: 30%;
 }
 
 .advantages__item-title {
@@ -240,6 +237,7 @@ body {
 
   & img {
     max-height: 440px;
+    max-width: 440px;
     height: auto;
     object-fit: contain;
     margin-bottom: 13px;
@@ -278,8 +276,10 @@ body {
   margin-bottom: 64px;
 }
 
-/* FRIDGES */
+/* FRIDGES SWIPER*/
 .fridges__swiper {
+  max-width: 1440px;
+  width: 90%;
   margin-bottom: 47px;
 
   & .swiper-wrapper {
@@ -345,14 +345,14 @@ body {
   margin: 0 auto;
   margin-bottom: 40px;
   width: 74%;
-  padding-left: 5px;
+  gap: 30px;
 }
 
 .advantages-bottom__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 424px;
+  width: 48%;
 }
 
 .advantages-bottom__img {
@@ -482,7 +482,7 @@ body {
   .advantages__descr-bottom,
   .advantages-bottom__descr {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 44px;
   }
 
   .advantages__item-title,
@@ -569,7 +569,7 @@ body {
   .advantages__descr-bottom,
   .advantages-bottom__descr {
     font-size: 24px;
-    line-height: 20px;
+    line-height: 30px;
   }
 
   .good-descr {
@@ -577,11 +577,12 @@ body {
   }
 
   .good-item-link {
-    width: 100%;
+    width: 70%;
 
     & img {
       width: 65%;
       max-height: 300px;
+      max-width: 300px;
     }
   }
   .good-banner {
@@ -595,6 +596,7 @@ body {
   .good-item-link {
     & p {
       font-size: 24px;
+      line-height: 30px;
     }
   }
 
@@ -603,7 +605,8 @@ body {
   }
 
   .fridges__swiper {
-    .swiper-btn {
+    width: 100%;
+    & .swiper-btn {
       width: 50px;
       height: 50px;
     }
@@ -631,7 +634,7 @@ body {
   .footer__logo-wrap,
   .footer__mail-wrap,
   .footer__tel-wrap {
-    width: 40%;
+    width: 50%;
   }
 
   .footer__mail-title {
@@ -655,18 +658,27 @@ body {
   .advantages__descr-bottom,
   .advantages-bottom__descr {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 26px;
     margin-bottom: 20px;
   }
 
-  .advantages__item-title,
-  .advantages-bottom__item-title {
-    font-size: 14px;
+  .advantages-bottom__list {
+    width: 100%;
+  }
+
+  .advantages__item,
+  .advantages-bottom__item {
+    width: 75%;
+  }
+
+  .advantages__list,
+  .advantages-bottom__list {
+    flex-direction: column;
+    align-items: center;
   }
 
   .advantages__img,
   .advantages-bottom__img {
-    width: 100px;
     margin-bottom: 20px;
   }
 
@@ -677,11 +689,19 @@ body {
   .good-item-link {
     & p {
       font-size: 18px;
+      line-height: 24px;
     }
   }
   .good-link {
     font-size: 18px;
     padding: 21px 100px;
+  }
+
+  .good-item-link {
+    & img {
+      max-height: 200px;
+      max-width: 200px;
+    }
   }
 
   .fridges__swiper .swiper-pagination {
@@ -695,7 +715,7 @@ body {
   .footer {
     p,
     a {
-      font-size: 10px;
+      font-size: 14px;
     }
   }
 
@@ -716,29 +736,32 @@ body {
       padding: 3px 5px;
     }
   }
-  .header__nav-item {
-    & a {
-      font-size: 14px;
-    }
-  }
 
   .advantages__descr,
   .good-descr,
   .advantages__descr-bottom,
   .advantages-bottom__descr {
     font-size: 12px;
-    line-height: 12px;
+    line-height: 20px;
   }
 
   .advantages__item-title,
   .advantages-bottom__item-title {
-    font-size: 8px;
+    font-size: 14px;
   }
 
   .advantages__img,
   .advantages-bottom__img {
-    width: 44px;
+    width: 100px;
     margin-bottom: 15px;
+  }
+
+  .fridges__swiper {
+    & .swiper-btn {
+      top: 40%;
+      width: 35px;
+      height: 35px;
+    }
   }
 
   .section-title {
@@ -759,7 +782,7 @@ body {
   .footer {
     p,
     a {
-      font-size: 8px;
+      font-size: 12px;
     }
   }
 
