@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NORDFROST Landing</title>
+    <title>NORDFROST Official</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="css/swiper.min.css" />
 
@@ -41,7 +41,13 @@
     <main>
       <section>
         <h1 class="visually-hidden">NORDFROST - сохраняя лучшее</h1>
-        <img class="banner__img" src="img/images/banner.webp" alt="Главный баннер" />
+        <video
+          class="banner__img"
+          src="img/IMG_6197.MP4"
+          poster="img/images/banner.webp"
+          autoplay
+          muted
+          loop></video>
       </section>
 
       <section class="advantages container">
@@ -110,13 +116,16 @@
         <div class="swiper fridges__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="img/images/fridges-banner.webp" alt="" />
+              <img src="img/images/fridges-slide-1.webp" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="img/images/fridges-banner.webp" alt="" />
+              <img src="img/images/fridges-slide-2.webp" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="img/images/fridges-banner.webp" alt="" />
+              <img src="img/images/fridges-slide-3.webp" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/images/fridges-slide-4.webp" alt="" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -371,10 +380,20 @@
         </div>
       </div>
     </footer>
+
+    <div id="modal-content">
+      <p>Контент модалки</p>
+      <button type="button" id="modal-close" href="#close">Закрыть</button>
+    </div>
+
     <script>
       const swiper = new Swiper(".fridges__swiper", {
         loop: true,
         centeredSlides: true,
+
+        autoplay: {
+          delay: 5000,
+        },
 
         pagination: {
           el: ".swiper-pagination",
